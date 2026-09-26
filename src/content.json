@@ -1,0 +1,1039 @@
+{
+  "name": "Sean Garcia",
+  "role": "Editor",
+  "email": "seangarciafm@gmail.com",
+  "tagline": "Trailer and campaign editor based in Los Angeles.",
+  "guild": "Member, Motion Picture Editors Guild Local 700",
+  "social": [
+    [
+      "LinkedIn",
+      "https://www.linkedin.com/in/seangarciafilm/"
+    ],
+    [
+      "IMDb",
+      "https://www.imdb.com/name/nm7389962/"
+    ],
+    [
+      "Instagram",
+      "https://www.instagram.com/seangarciafilm"
+    ]
+  ],
+  "about": {
+    "intro": [
+      "An editor based in Los Angeles.",
+      "Member Motion Pictures Editors Guild Local 700",
+      "seangarciafm@gmail.com"
+    ],
+    "work": [
+      {
+        "role": "Editor @ Freelance",
+        "dates": "July 2023 - Present"
+      },
+      {
+        "role": "Editor @ Wild Card Creative Group",
+        "dates": "Jan 2021 - July 2023"
+      },
+      {
+        "role": "Editor @ Eclipse Advertising",
+        "dates": "Nov 2019 - Jan 2021"
+      },
+      {
+        "role": "Editor @ Buddha Jones",
+        "dates": "Aug 2018 - Nov 2019"
+      },
+      {
+        "role": "Editor @ Tiny Hero",
+        "dates": "Sep 2017 - June 2018"
+      }
+    ],
+    "accolades": [
+      {
+        "year": "2024",
+        "html": "<strong>Omeleto</strong> release for <em>“Bump”</em>"
+      },
+      {
+        "year": "2022",
+        "html": "<strong>HollyShorts Film Festival</strong> - Official Selection for <em>“Bump”</em>"
+      },
+      {
+        "year": "2022",
+        "html": "<strong>SModcastle Film Festival</strong> - Official Selection for <em>“Bump”</em>"
+      },
+      {
+        "year": "2019",
+        "html": "<strong>Promax Bronze Award Winner</strong> for <em>Paramount Look Book</em>"
+      },
+      {
+        "year": "2019",
+        "html": "<strong>Gold Telly Award Winner</strong> for <em>Paramount Look Book</em>"
+      },
+      {
+        "year": "2019",
+        "html": "<strong>Golden Trailer Winner</strong> for Best Home Ent Fantasy Adventure - <em>Avengers: Infinity War - “Announce Trailer”</em>"
+      },
+      {
+        "year": "2019",
+        "html": "<strong>Promax Gold Award Winner</strong> for Best Home Entertainment Marketing Campaign - <em>Avengers: Infinity War - “Announce Trailer”</em>"
+      },
+      {
+        "year": "2018",
+        "html": "<strong>Clio Awards</strong> - <strong>Silver Clio Winner</strong> - <em>Avengers: Infinity War - “Target Wall”</em> - Home Entertainment Audio/Visual"
+      },
+      {
+        "year": "2018",
+        "html": "<strong>Clio Awards</strong> - <strong>Bronze Clio Winner</strong> - <em>Avengers: Infinity War - Campaign</em> - Best Home Entertainment Campaign"
+      },
+      {
+        "year": "2018",
+        "html": "<strong>Golden Trailer Nominee</strong> for Best Sound Editing - <em>Black Panther, “Team”</em>"
+      },
+      {
+        "year": "2018",
+        "html": "<strong>Golden Trailer Nominee</strong> for Best Radio / Audio Spot - <em>Black Panther, “Just Getting Started”</em>"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "slug": "sean-garcia-editing-reel",
+      "name": "Sean Garcia",
+      "kind": "Editing Reel",
+      "category": "reel",
+      "thumb": "/assets/images/thumb-sean-garcia-editing-reel.png",
+      "spots": [
+        {
+          "title": "Editing Reel",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/1011458714",
+              "ratio": 1.775,
+              "title": "I'm Feeling Lucky"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "euphoria-season-3-socials",
+      "name": "Euphoria Season 3",
+      "kind": "Socials",
+      "category": "digital",
+      "thumb": "/assets/images/thumb-euphoria-season-3-socials.webp",
+      "spots": [
+        {
+          "title": "Socials",
+          "role": "Editor",
+          "media": [
+            {
+              "image": "/assets/images/thumb-euphoria-season-3-socials.webp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "aminecraftmovie",
+      "name": "A Minecraft Movie",
+      "kind": "TVs",
+      "category": "tv",
+      "thumb": "/assets/images/thumb-aminecraftmovie.jpg",
+      "spots": [
+        {
+          "title": "TV 30 · “Universe”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/1065725826",
+              "ratio": 1.775,
+              "title": "A Minecraft Movie \"Universe\" TV30"
+            }
+          ]
+        },
+        {
+          "title": "TV 15 · “Favorite”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/1069766922",
+              "ratio": 1.775,
+              "title": "A Minecraft Movie \"Favorite\" TV15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "the-lion-king",
+      "name": "The Lion King",
+      "kind": "TVs",
+      "category": "tv",
+      "thumb": "/assets/images/thumb-the-lion-king.jpg",
+      "spots": [
+        {
+          "title": "TV 30 · “True King”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/844748216",
+              "ratio": 1.775,
+              "title": "The Lion King \"True King\" TV30"
+            }
+          ]
+        },
+        {
+          "title": "TV 30 · “Fight”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/844749641",
+              "ratio": 1.775,
+              "title": "The Lion King \"Stars\" - TV30"
+            }
+          ]
+        },
+        {
+          "title": "TV 30 · “Stars”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/844750992",
+              "ratio": 1.775,
+              "title": "The Lion King \"Fight\" - TV30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "in-my-opinion",
+      "name": "In My Opinion",
+      "kind": "Web Series",
+      "category": "digital",
+      "thumb": "/assets/images/thumb-in-my-opinion.jpg",
+      "spots": [
+        {
+          "title": "Should Couples Share Phone Passcodes? | Hung Jury Debates",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://www.youtube-nocookie.com/embed/QaYtK1DJfmA",
+              "ratio": 1.77,
+              "title": "Should Couples Share Phone Passcodes? | Hung Jury Debates"
+            }
+          ]
+        },
+        {
+          "title": "Who’s the Most Overrated Pop Star and Why Is It Drake? | Street Cred",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://www.youtube-nocookie.com/embed/UgmS_XDtQj8",
+              "ratio": 1.77,
+              "title": "Who’s the Most Overrated Pop Star and Why Is It Drake? | Street Cred"
+            }
+          ]
+        },
+        {
+          "title": "Is TikTok Ruining Music or Saving It? | Hot Buttons",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://www.youtube-nocookie.com/embed/BNnZ9A9x1cI",
+              "ratio": 1.77,
+              "title": "Is TikTok Ruining Music or Saving It? | Hot Buttons"
+            }
+          ]
+        },
+        {
+          "title": "Would You Hook Up on a First Date? | Street Cred",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://www.youtube-nocookie.com/embed/-jN6nQBCuk8",
+              "ratio": 1.77,
+              "title": "Would You Hook Up on a First Date? | Street Cred"
+            }
+          ]
+        }
+      ],
+      "intro": "In My Opinion Network"
+    },
+    {
+      "slug": "creed3",
+      "name": "Creed 3",
+      "kind": "TVs",
+      "category": "tv",
+      "thumb": "/assets/images/thumb-creed3.jpg",
+      "spots": [
+        {
+          "title": "TV 30 · “Unfinished Business”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/851340986",
+              "ratio": 1.775,
+              "title": "Creed 3 \"Unfinished Business\" TV30"
+            }
+          ]
+        },
+        {
+          "title": "TV 30 · “Trilogy Review / Hispanic”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/851336554",
+              "ratio": 1.775,
+              "title": "Creed 3 \"Trilogy Review / Hispanic\" TV30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "push-our-luck-by-darci-lynne-lyric-video",
+      "name": "“Push Our Luck“ by Darci Lynne",
+      "kind": "Lyric Video",
+      "category": "digital",
+      "thumb": "/assets/images/thumb-push-our-luck-by-darci-lynne-lyric-video.webp",
+      "spots": [
+        {
+          "title": "Lyric Video",
+          "role": "Animator · Editor",
+          "media": [
+            {
+              "video": "https://www.youtube-nocookie.com/embed/nUCKPThXN8w",
+              "ratio": 1.77,
+              "title": "LYRIC VIDEO:  “Push Our Luck” Official Lyric Video | Darci Lynne"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "secret-invasion",
+      "name": "Secret Invasion",
+      "kind": "TVs",
+      "category": "tv",
+      "thumb": "/assets/images/thumb-secret-invasion.jpg",
+      "spots": [
+        {
+          "title": "TV 30 · “Threat”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/851403851",
+              "ratio": 1.775,
+              "title": "Secret Invasion \"Threat\" TV30"
+            }
+          ]
+        },
+        {
+          "title": "TV 15 · “Special”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/851402160",
+              "ratio": 1.775,
+              "title": "Secret Invasion \"Special\" TV15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "king-richard-digitals",
+      "name": "King Richard",
+      "kind": "Digitals",
+      "category": "digital",
+      "thumb": "/assets/images/thumb-king-richard-digitals.jpg",
+      "spots": [
+        {
+          "title": "DIG 20 · “Be King Richard”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/844757526",
+              "ratio": 1.775,
+              "title": "King Richard \"Be King Richard\" DIG20"
+            }
+          ]
+        },
+        {
+          "title": "DIG 20 · “Alive”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/844756718",
+              "ratio": 1.775,
+              "title": "King Richard \"Alive\" DIG20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "americas-test-kitchen-the-next-generation-trailer",
+      "name": "America’s Test Kitchen: The Next Generation",
+      "kind": "Trailer",
+      "category": "trailer",
+      "thumb": "/assets/images/thumb-americas-test-kitchen-the-next-generation-trailer.jpg",
+      "spots": [
+        {
+          "title": "Trailer",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/863685976",
+              "ratio": 1.775,
+              "title": "America's Test Kitchen: The Next Generation \"Trailer\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "indiana-jones-and-the-dial-of-destiny",
+      "name": "Indiana Jones and the Dial of Destiny",
+      "kind": "TVs",
+      "category": "tv",
+      "thumb": "/assets/images/thumb-indiana-jones-and-the-dial-of-destiny.jpg",
+      "spots": [
+        {
+          "title": "TV 15 · “Make”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/851375141",
+              "ratio": 1.775,
+              "title": "Indiana Jones - The Dial of Destiny \"Make\" TV15"
+            }
+          ]
+        },
+        {
+          "title": "TV 15 · “Greatest”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/851374072",
+              "ratio": 1.775,
+              "title": "Indiana Jones - The Dial of Destiny \"Return\" TV15"
+            }
+          ]
+        },
+        {
+          "title": "TV 15 · “Return”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/851354525",
+              "ratio": 1.775,
+              "title": "Indiana Jones - The Dial of Destiny \"Greatest\" TV15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "transformers-rise-of-the-beasts",
+      "name": "Transformers: Rise of the Beasts",
+      "kind": "TVs",
+      "category": "tv",
+      "thumb": "/assets/images/thumb-transformers-rise-of-the-beasts.jpg",
+      "spots": [
+        {
+          "title": "TV 15 · “Roar / Kids”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/851376116",
+              "ratio": 1.775,
+              "title": "Transformers - Rise of the Beast \"Roar / Kids\" TV15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "avatar-re-release",
+      "name": "Avatar Re-Release",
+      "kind": "TVs",
+      "category": "tv",
+      "thumb": "/assets/images/thumb-avatar-re-release.jpg",
+      "spots": [
+        {
+          "title": "TV 30 · “Neytiri”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/851457476",
+              "ratio": 1.775,
+              "title": "Avatar Re-Release \"Neytiri\" TV30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "tuttle-twins-trailer",
+      "name": "Tuttle Twins",
+      "kind": "Trailer",
+      "category": "trailer",
+      "thumb": "/assets/images/thumb-tuttle-twins-trailer.jpg",
+      "spots": [
+        {
+          "title": "Trailer · “Season 1”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/864907244",
+              "ratio": 1.775,
+              "title": "Tuttle Twins \"Season 1\" Trailer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "prey",
+      "name": "Prey",
+      "kind": "TVs",
+      "category": "tv",
+      "thumb": "/assets/images/thumb-prey.jpg",
+      "spots": [
+        {
+          "title": "TV 30 · “First Hunt”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/851457125",
+              "ratio": 1.775,
+              "title": "Prey \"First Hunt\" TV30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "invisible-man",
+      "name": "Invisible Man",
+      "kind": "TVs",
+      "category": "tv",
+      "thumb": "/assets/images/thumb-invisible-man.jpg",
+      "spots": [
+        {
+          "title": "TV 30 · “Surprise”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/844744694",
+              "ratio": 1.775,
+              "title": "Invisible Man \"Suprise\" - TV30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "avengers-infinity-war-trailer",
+      "name": "Avengers: Infinity War",
+      "kind": "Trailer",
+      "category": "trailer",
+      "thumb": "/assets/images/thumb-avengers-infinity-war-trailer.jpg",
+      "spots": [
+        {
+          "title": "Trailer · “Announce”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/856523582",
+              "ratio": 1.775,
+              "title": "Avengers: Infinity War \"Announce\" Trailer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "killers-of-the-flower-moon",
+      "name": "Killers of the Flower Moon",
+      "kind": "TVs",
+      "category": "tv",
+      "thumb": "/assets/images/thumb-killers-of-the-flower-moon.jpg",
+      "spots": [
+        {
+          "title": "TV 30 · “Regret Review”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/872759337",
+              "ratio": 1.775,
+              "title": "Killers of the Flower Moon \"Regret Review\" TV30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cruel-summer",
+      "name": "Cruel Summer",
+      "kind": "TVs",
+      "category": "tv",
+      "thumb": "/assets/images/thumb-cruel-summer.jpg",
+      "spots": [
+        {
+          "title": "TV 30 · “The Most Hated Girl in America”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/920277889",
+              "ratio": 1.775,
+              "title": "Cruel Summer \"The Most Hated Girl in America\" TV30"
+            }
+          ]
+        },
+        {
+          "title": "Trailer · “Season 1”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/851354104",
+              "ratio": 1.775,
+              "title": "Cruel Summer \"Season 1\" Trailer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "air",
+      "name": "Air",
+      "kind": "TVs",
+      "category": "tv",
+      "thumb": "/assets/images/thumb-air.jpg",
+      "spots": [
+        {
+          "title": "TV 15 · “Michael / Review”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/851442325",
+              "ratio": 1.0,
+              "title": "Air \"Michael / Review\" TV15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "mafia-momma",
+      "name": "Mafia Mamma",
+      "kind": "TVs",
+      "category": "tv",
+      "thumb": "/assets/images/thumb-mafia-momma.jpg",
+      "spots": [
+        {
+          "title": "TV 30 · “Exciting”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/851334127",
+              "ratio": 1.775,
+              "title": "Mafia Mamma \"Exciting\" TV30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "paramount-socials",
+      "name": "Paramount+",
+      "kind": "Socials",
+      "category": "digital",
+      "thumb": "/assets/images/thumb-paramount-socials.jpg",
+      "spots": [
+        {
+          "title": "Paramount+ Social Edits",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/978340840",
+              "ratio": 0.563,
+              "title": "Paramount+ - Father's Day"
+            },
+            {
+              "video": "https://player.vimeo.com/video/1018093205",
+              "ratio": 0.563,
+              "title": "Clueless \"As If!\""
+            },
+            {
+              "video": "https://player.vimeo.com/video/1018095795",
+              "ratio": 0.563,
+              "title": "Teen Mom \"Kesha\""
+            },
+            {
+              "video": "https://player.vimeo.com/video/1018094836",
+              "ratio": 0.563,
+              "title": "Cheers \"Frasier Crane\""
+            },
+            {
+              "video": "https://player.vimeo.com/video/1018092968",
+              "ratio": 0.563,
+              "title": "King Of Queens \"Corn Debate\""
+            },
+            {
+              "video": "https://player.vimeo.com/video/1018096289",
+              "ratio": 0.563,
+              "title": "Everybody Loves Raymond \"Kiss My Rear-o\""
+            },
+            {
+              "video": "https://player.vimeo.com/video/1018094788",
+              "ratio": 0.563,
+              "title": "Dexter \"Elevator\""
+            },
+            {
+              "video": "https://player.vimeo.com/video/1018094750",
+              "ratio": 0.563,
+              "title": "Pete Davidson \"Friends\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "the-dropout",
+      "name": "The Dropout",
+      "kind": "TVs",
+      "category": "tv",
+      "thumb": "/assets/images/thumb-the-dropout.jpg",
+      "spots": [
+        {
+          "title": "TV 30 · “Next On · Finale”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/851442307",
+              "ratio": 1.775,
+              "title": "The Dropout \"Next On - Finale\" TV30"
+            }
+          ]
+        },
+        {
+          "title": "TV 30 · “Stellar / Review”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/851439623",
+              "ratio": 1.775,
+              "title": "The Dropout \"Stellar / Review\" TV15"
+            }
+          ]
+        },
+        {
+          "title": "TV 15 · “Stellar / Review”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/851442280",
+              "ratio": 1.0,
+              "title": "The Dropout \"Stellar / Review\" TV30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "dickinson-trailer",
+      "name": "Dickinson",
+      "kind": "Trailer",
+      "category": "trailer",
+      "thumb": "/assets/images/thumb-dickinson-trailer.jpg",
+      "spots": [
+        {
+          "title": "Trailer · “Season 1”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/844759844",
+              "ratio": 1.775,
+              "title": "Dickinson \"Season 1 Trailer\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "the-boys",
+      "name": "The Boys",
+      "kind": "TVs",
+      "category": "tv",
+      "thumb": "/assets/images/thumb-the-boys.jpg",
+      "spots": [
+        {
+          "title": "TV 30 · “Maeve”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/844763601",
+              "ratio": 1.775,
+              "title": "The Boys \"Maeve\" TV30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "house-of-gucci",
+      "name": "House of Gucci",
+      "kind": "TVs",
+      "category": "tv",
+      "thumb": "/assets/images/thumb-house-of-gucci.jpg",
+      "spots": [
+        {
+          "title": "TV 30 · “Power”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/844751939",
+              "ratio": 1.775,
+              "title": "House of Gucci \"Power\" TV30"
+            }
+          ]
+        },
+        {
+          "title": "TV 15 · “Scandal”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/844754452",
+              "ratio": 1.775,
+              "title": "House of Gucci \"Scandal\" - TV15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "gabriel-fluffy-iglesias-one-show-fits-all-trailer",
+      "name": "Gabriel “Fluffy” Iglesias: One Show Fits All",
+      "kind": "Trailer",
+      "category": "trailer",
+      "thumb": "/assets/images/thumb-gabriel-fluffy-iglesias-one-show-fits-all-trailer.jpg",
+      "spots": [
+        {
+          "title": "Trailer",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://www.youtube-nocookie.com/embed/IJXsgjKe9no",
+              "ratio": 1.77,
+              "title": "Gabriel \"Fluffy\" Iglesias: One Show Fits All | Official Trailer [HD] | Netflix"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "who-killed-sara-trailer",
+      "name": "Who Killed Sara?",
+      "kind": "Trailer",
+      "category": "trailer",
+      "thumb": "/assets/images/thumb-who-killed-sara-trailer.jpg",
+      "spots": [
+        {
+          "title": "Trailer · “Season 2”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/1093611930",
+              "ratio": 1.775,
+              "title": "Who Killed Sara? \"Season 2 Trailer\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "godzilla-vs-kong-trailer",
+      "name": "Godzilla vs Kong",
+      "kind": "Trailer",
+      "category": "trailer",
+      "thumb": "/assets/images/thumb-godzilla-vs-kong-trailer.jpg",
+      "spots": [
+        {
+          "title": "Trailer · “Home”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/882197117",
+              "ratio": 1.775,
+              "title": "Godzilla vs Kong \"Home\" Trailer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "tenet",
+      "name": "Tenet",
+      "kind": "TVs",
+      "category": "tv",
+      "thumb": "/assets/images/thumb-tenet.jpg",
+      "spots": [
+        {
+          "title": "TV 30 · “Threat”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/844742931",
+              "ratio": 1.775,
+              "title": "Tenet \"Threat\" - TV30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "the-boys-present-diabolical",
+      "name": "The Boys Present: Diabolical",
+      "kind": "TVs",
+      "category": "tv",
+      "thumb": "/assets/images/thumb-the-boys-present-diabolical.jpg",
+      "spots": [
+        {
+          "title": "TV 30 · “Cutdown”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/882220610",
+              "ratio": 1.775,
+              "title": "The Boys Presents: Diabolical \"Cutdown\" TV30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "tiny-beautiful-things-social",
+      "name": "Tiny Beautiful Things",
+      "kind": "Socials",
+      "category": "digital",
+      "thumb": "/assets/images/thumb-tiny-beautiful-things-social.jpg",
+      "spots": [
+        {
+          "title": "EPK · “Quentin Plair”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/898182941",
+              "ratio": 0.563,
+              "title": "Tiny Beautiful Things - Quentin Plair - EPK"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "halloween",
+      "name": "Halloween",
+      "kind": "TVs",
+      "category": "tv",
+      "thumb": "/assets/images/thumb-halloween.jpg",
+      "spots": [
+        {
+          "title": "TV 15 · “Brace”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/844787259",
+              "ratio": 1.775,
+              "title": "Halloween \"Brace\" - TV15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "imaginary",
+      "name": "Imaginary",
+      "kind": "TVs",
+      "category": "tv",
+      "thumb": "/assets/images/thumb-imaginary.jpg",
+      "spots": [
+        {
+          "title": "TV 15 · “Game 15”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/923059423",
+              "ratio": 1.775,
+              "title": "Imaginary \"Game15\" TV15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ant-man-and-the-wasp",
+      "name": "Ant-man and the Wasp",
+      "kind": "TVs",
+      "category": "tv",
+      "thumb": "/assets/images/thumb-ant-man-and-the-wasp.jpg",
+      "spots": [
+        {
+          "title": "TV 30 · “Super Size / Kids”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/844766947",
+              "ratio": 1.775,
+              "title": "Ant-man and the Wasp \"Super Sized / Kids\" TV30"
+            }
+          ]
+        },
+        {
+          "title": "TV 15 · “Buzz #1 Movie”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/844767059",
+              "ratio": 1.775,
+              "title": "Ant-man and the Wasp \"Buzz #1 Movie\" TV15"
+            }
+          ]
+        },
+        {
+          "title": "TV 30 · “Funniest Movie Review”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/844770135",
+              "ratio": 1.775,
+              "title": "Ant-man and the Wasp \"Funniest Movie Review\" TV30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "black-panther-trailer",
+      "name": "Black Panther",
+      "kind": "Trailer",
+      "category": "trailer",
+      "thumb": "/assets/images/thumb-black-panther-trailer.jpg",
+      "spots": [
+        {
+          "title": "Trailer · “Target Showcase Wall”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://player.vimeo.com/video/865756553",
+              "ratio": 3.55,
+              "title": "Black Panther \"Target Showcase Wall\" Trailer"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

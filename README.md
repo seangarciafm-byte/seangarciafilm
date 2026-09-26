@@ -1,32 +1,37 @@
 # seangarciafilm.com
 
-A plain HTML and CSS copy of the Squarespace portfolio at <https://seangarciafilm.com>. It has no build step, no framework and no dependency on Squarespace. The fonts and images are all stored in this repo. Videos are embedded from Vimeo and YouTube, just as they were on Squarespace.
+The portfolio site for Sean Garcia. It's plain HTML and CSS with a small script, with no framework and no dependency on Squarespace. The fonts and images are all stored in this repo. Videos are embedded from Vimeo and YouTube.
 
 ## What's here
 
 ```
-index.html                         Selected Work grid (home page, 36 projects)
-about/index.html                   About page
-selected-work/<project>/index.html One page per project (same URLs as Squarespace)
-404.html                           Not-found page
-assets/css/style.css               All styling (Poppins + Manrope, the site's greys, grid layout)
-assets/js/site.js                  Mobile menu toggle
-assets/fonts/                      Poppins and Manrope (both under the SIL Open Font License)
-assets/images/                     Thumbnails, headshot and social-share image
+index.html                          Home: intro, reel, filterable work grid
+about/index.html                    About: experience and recognition
+selected-work/<project>/index.html  One page per project (same URLs as the old Squarespace site)
+404.html                            Not-found page
+assets/css/style.css                All styling (Manrope, light + automatic dark mode)
+assets/js/site.js                   Scroll fade-ins, header behaviour, work filters, footer year
+assets/fonts/, assets/images/       Font and images
+src/content.json                    All the site's words, projects and video links
+src/build.py                        Generates the HTML pages from content.json
+.htaccess                           DreamHost/Apache: 404 page, https + www redirect
 ```
 
-Every page keeps its Squarespace URL (for example `/about` and `/selected-work/tenet`), so existing links and search results keep working.
+## Editing content
 
-## Editing
+Every page is generated from `src/content.json`, so edit the text or projects there, not in the HTML.
 
-- **Change text:** open the page's `index.html` and edit the text between the tags.
-- **Add a project:**
-  1. Copy one of the `selected-work/<project>/` folders and rename it.
-  2. Change the title, the credit and the Vimeo or YouTube `iframe src`.
-  3. Put a 16:9 thumbnail in `assets/images/`.
-  4. In `index.html`, copy one `<a class="grid-item">…</a>` block and point it at the new folder and thumbnail.
-  5. Update the Previous and Next links on the neighbouring project pages.
-- **Preview locally:** run `python3 -m http.server` in this folder, then open <http://localhost:8000>. Links start with `/`, so opening the files by double-clicking won't work.
+1. **Edit the content.** To add a project, copy an entry in `projects` and change it:
+   - `slug`: the URL name
+   - `name` and `kind` (e.g. "TVs" or "Trailer")
+   - `category`: one of `trailer`, `tv` or `digital`
+   - `thumb`: a 16:9 image you've put in `assets/images/`
+   - `spots`: one entry per video, with its Vimeo/YouTube embed URL and `ratio` (width ÷ height, e.g. `1.778` for 16:9 or `0.5625` for vertical)
+
+   Projects appear on the home page in the order they're listed.
+2. **Rebuild the pages.** Run `python3 src/build.py` from this folder.
+3. **Preview (optional).** Run `python3 -m http.server`, then open <http://localhost:8000>.
+4. **Upload.** Put the changed files on DreamHost (the `src/` folder doesn't need to go up).
 
 ## Hosting (free)
 

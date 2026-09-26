@@ -1,46 +1,54 @@
-// Mobile menu toggle (the only script on the site).
 (function () {
-  var btn = document.querySelector('.menu-toggle');
-  if (!btn) return;
-  var label = btn.querySelector('.visually-hidden');
-  function set(open) {
-    document.body.classList.toggle('menu-open', open);
-    btn.setAttribute('aria-expanded', String(open));
-    label.textContent = open ? 'Close Menu' : 'Open Menu';
+  var body = document.body;
+
+  // Footer year stays current.
+  var year = document.querySelector('.year');
+  if (year) year.textContent = new Date().getFullYear();
+
+  // Header: hairline once scrolled; tucks away when scrolling down, returns when scrolling up.
+  var lastY = window.scrollY;
+  window.addEventListener('scroll', function () {
+    var y = window.scrollY;
+    body.classList.toggle('is-scrolled', y > 8);
+    body.classList.toggle('header-hidden', y > 240 && y > lastY);
+    lastY = y;
+  }, { passive: true });
+
+  // Fade things up as they scroll into view.
+  var reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -6% 0px' });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('is-in'); });
   }
-  btn.addEventListener('click', function () {
-    set(!document.body.classList.contains('menu-open'));
-  });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') set(false);
-  });
-})();
 
-// Keep the footer copyright year current.
-(function () {
-  var y = document.querySelector('.footer .year');
-  if (y) y.textContent = new Date().getFullYear();
-})();
-
-// Header shadow after scrolling, and fade-in of tiles, videos and text as they enter the screen.
-(function () {
-  var root = document.documentElement;
-  var onScroll = function () { document.body.classList.toggle('scrolled', window.scrollY > 8); };
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-
-  if (!('IntersectionObserver' in window)) return;
-  root.classList.add('js');
-  var items = document.querySelectorAll('.grid-item, .fe-block, .item-pagination');
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) {
-      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  // Work filters.
+  var chips = document.querySelectorAll('.chip');
+  var cards = document.querySelectorAll('.card');
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      var filter = chip.getAttribute('data-filter');
+      chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c === chip)); });
+      var n = 0;
+      cards.forEach(function (card) {
+        var show = filter === 'all' || card.getAttribute('data-category') === filter;
+        card.classList.toggle('is-hidden', !show);
+        card.classList.remove('is-entering');
+        if (show) {
+          card.classList.add('is-in');
+          card.style.setProperty('--n', n++);
+          void card.offsetWidth; // restart the entrance animation
+          card.classList.add('is-entering');
+        }
+      });
     });
-  }, { rootMargin: '0px 0px -8% 0px' });
-  items.forEach(function (el, i) {
-    el.classList.add('reveal');
-    // Stagger tiles in each grid row of three
-    if (el.classList.contains('grid-item')) el.style.setProperty('--d', (i % 3) * 0.08 + 's');
-    io.observe(el);
   });
 })();
