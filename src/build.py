@@ -5,6 +5,7 @@ Usage (from the repo root):  python3 src/build.py
 Edit content.json to add or change projects, then re-run and upload the output.
 No dependencies beyond Python 3.
 """
+import hashlib
 import html
 import json
 import os
@@ -12,6 +13,14 @@ import os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = json.load(open(os.path.join(ROOT, 'src', 'content.json'), encoding='utf-8'))
 DOMAIN = 'https://seangarciafilm.com'
+
+
+
+def asset(path):
+    """Append a content hash so browsers fetch the new file whenever it changes."""
+    with open(os.path.join(ROOT, path.lstrip('/')), 'rb') as f:
+        return f"{path}?v={hashlib.sha256(f.read()).hexdigest()[:10]}"
+
 
 CATEGORIES = [('all', 'All'), ('trailer', 'Trailers'), ('tv', 'TV Spots'), ('digital', 'Digital & Social')]
 CATEGORY_LABEL = dict(CATEGORIES)
@@ -38,7 +47,7 @@ def head(title, path, description=None):
 <meta property="og:image" content="{DOMAIN}/assets/images/social-share.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="{asset('/assets/css/style.css')}">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 '''
@@ -77,7 +86,7 @@ def footer():
     </div>
   </div>
 </footer>
-<script src="/assets/js/site.js" defer></script>
+<script src="{asset('/assets/js/site.js')}" defer></script>
 </body>
 </html>
 '''
