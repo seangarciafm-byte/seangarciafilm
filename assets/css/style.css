@@ -338,3 +338,5 @@ main { animation: fade-in .5s var(--ease) both; }
 .form-status.is-ok { color: #2f7d4f; }
 .form-status.is-error { color: #c2412d; }
 @media (max-width: 800px) { .contact { grid-template-columns: 1fr; } }
+.site-footer--compact { padding-top: 32px; }
+.site-footer--compact .footer-bottom { margin-top: 0; }

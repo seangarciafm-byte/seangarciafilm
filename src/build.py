@@ -73,14 +73,14 @@ def header(current):
 '''
 
 
-def footer():
+def footer(cta=True):
+    cta_html = ('<p class="footer-kicker reveal">Let’s work together</p>\n    '
+                '<a class="footer-email reveal" href="/contact/">Get in touch<span class="arrow" aria-hidden="true">↗</span></a>\n    ')
     social = ''.join(f'<li><a href="{u}" target="_blank" rel="noopener">{e(n)}</a></li>' for n, u in SITE['social'])
     return f'''</main>
-<footer class="site-footer">
+<footer class="site-footer{'' if cta else ' site-footer--compact'}">
   <div class="wrap">
-    <p class="footer-kicker reveal">Let’s work together</p>
-    <a class="footer-email reveal" href="/contact/">Get in touch<span class="arrow" aria-hidden="true">↗</span></a>
-    <div class="footer-bottom">
+    {cta_html if cta else ''}<div class="footer-bottom">
       <ul class="footer-social">{social}</ul>
       <p>© <span class="year">2026</span> {e(SITE['name'])} · Los Angeles</p>
     </div>
@@ -241,7 +241,7 @@ contact = head(f"Contact | {SITE['name']}", '/contact/', f"Get in touch with {SI
     <p class="form-status" role="status" aria-live="polite"></p>
   </form>
 </section>
-''' + footer()
+''' + footer(cta=False)
 write('/contact/', contact)
 
 # ---------- 404 ----------
