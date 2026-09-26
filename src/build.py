@@ -131,7 +131,7 @@ if reel:
   <p class="reel-caption"><span>Editing Reel</span><a href="/selected-work/{reel['slug']}/">Open ↗</a></p>
 </section>
 '''
-home = head(f"{SITE['name']} | {SITE['role']}", '/') + header('work') + f'''<section class="wrap hero">
+home = head(f"{SITE['name']} - {SITE['role']}", '/') + header('work') + f'''<section class="wrap hero">
   <h1 class="hero-title reveal">{e(SITE['tagline'])}</h1>
   <p class="hero-sub reveal">{e(SITE['guild'])} · <a href="/contact/">Get in touch</a></p>
 </section>
@@ -167,7 +167,7 @@ for idx, p in enumerate(projects):
             caption = f'<figcaption class="spot-caption"><span>{e(s["title"])}</span><span class="muted">{e(s["role"])}</span></figcaption>'
         body.append(f'<figure class="spot reveal"><div class="{cls}">{media}</div>{caption}</figure>')
     intro = f'<p class="project-intro">{e(p["intro"])}</p>' if p.get('intro') else ''
-    page = head(f"{p['name']} | {SITE['name']}", f"/selected-work/{p['slug']}/",
+    page = head(f"{p['name']} - {SITE['name']}", f"/selected-work/{p['slug']}/",
                 f"{p['name']} ({p['kind']}), edited by {SITE['name']}.") + header('work') + f'''<article class="wrap project">
   <a class="back" href="/#work-heading">← All work</a>
   <header class="project-head reveal">
@@ -193,7 +193,7 @@ work_rows = ''.join(
     f'<li class="row"><span>{e(w["role"].split(" @ ")[-1].strip())}<span class="muted"> · {e(w["role"].split(" @ ")[0].strip())}</span></span>'
     f'<span class="muted">{e(w["dates"])}</span></li>' for w in a['work'])
 award_rows = ''.join(f'<li class="row row--award"><span class="muted">{x["year"]}</span><span>{x["html"]}</span></li>' for x in a['accolades'])
-about = head(f"About | {SITE['name']}", '/about/') + header('about') + f'''<section class="wrap about">
+about = head(f"About - {SITE['name']}", '/about/') + header('about') + f'''<section class="wrap about">
   <div class="about-photo reveal"><img src="/assets/images/sean-garcia-headshot.jpg" alt="Portrait of {e(SITE['name'])}" width="1500" height="2249"></div>
   <div class="about-body">
     <h1 class="about-title reveal">{e(a['intro'][0])}</h1>
@@ -209,7 +209,7 @@ about = head(f"About | {SITE['name']}", '/about/') + header('about') + f'''<sect
 write('/about/', about)
 
 # ---------- Contact ----------
-contact = head(f"Contact | {SITE['name']}", '/contact/', f"Get in touch with {SITE['name']}, an editor based in Los Angeles.") + header('contact') + '''<section class="wrap contact">
+contact = head(f"Contact - {SITE['name']}", '/contact/', f"Get in touch with {SITE['name']}, an editor based in Los Angeles.") + header('contact') + '''<section class="wrap contact">
   <div class="contact-intro">
     <h1 class="about-title reveal">Let’s work together.</h1>
     <p class="about-sub reveal">Tell me about your project, timeline and what you need. I’ll get back to you as soon as I can.</p>
@@ -245,7 +245,7 @@ contact = head(f"Contact | {SITE['name']}", '/contact/', f"Get in touch with {SI
 write('/contact/', contact)
 
 # ---------- 404 ----------
-nf = head(f"Page not found | {SITE['name']}", '/') + header('') + '''<section class="wrap hero hero--center">
+nf = head(f"Page not found - {SITE['name']}", '/') + header('') + '''<section class="wrap hero hero--center">
   <h1 class="hero-title">This page doesn’t exist.</h1>
   <p class="hero-sub"><a href="/">Back to the work →</a></p>
 </section>
