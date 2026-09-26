@@ -37,7 +37,7 @@ def head(title, path, description=None):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(description)}">
-<meta name="color-scheme" content="light dark">
+<meta name="color-scheme" content="light">
 <link rel="canonical" href="{DOMAIN}{path}">
 <meta property="og:site_name" content="{e(SITE['name'])}">
 <meta property="og:title" content="{e(title)}">

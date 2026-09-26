@@ -11,7 +11,7 @@ selected-work/<project>/index.html  One page per project (same URLs as the old S
 contact/index.html                  Contact page with a form
 contact/send.php                    Emails form messages to seangarciafm@gmail.com (PHP, runs on DreamHost)
 404.html                            Not-found page
-assets/css/style.css                All styling (Manrope, light + automatic dark mode)
+assets/css/style.css                All styling (Manrope, light theme)
 assets/js/site.js                   Scroll fade-ins, header behaviour, work filters, footer year
 assets/fonts/, assets/images/       Font and images
 src/content.json                    All the site's words, projects and video links
