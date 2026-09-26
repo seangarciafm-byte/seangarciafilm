@@ -15,3 +15,9 @@
     if (e.key === 'Escape') set(false);
   });
 })();
+
+// Keep the footer copyright year current.
+(function () {
+  var y = document.querySelector('.footer .year');
+  if (y) y.textContent = new Date().getFullYear();
+})();
