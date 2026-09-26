@@ -1,0 +1,17 @@
+# Apache settings for DreamHost hosting
+ErrorDocument 404 /404.html
+
+RewriteEngine On
+# Send http:// and www. to https://seangarciafilm.com
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://seangarciafilm.com%{REQUEST_URI} [L,R=301]
+
+# Cache fonts and images for a month
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType font/woff2 "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+</IfModule>
