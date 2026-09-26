@@ -30,48 +30,46 @@ Every page keeps its Squarespace URL (for example `/about` and `/selected-work/t
 
 ## Hosting (free)
 
-Any static host will work. **Cloudflare Pages** is the easiest route if you also want to move the domain to Cloudflare (see below). Netlify and GitHub Pages work the same way.
-
-**Cloudflare Pages**
-
-1. Sign up at dash.cloudflare.com, then go to **Workers & Pages → Create → Pages → Connect to Git** and pick this repo.
-2. Set the framework preset to **None**. Leave the build command empty and set the output directory to `/`.
-3. Deploy. The site goes live at `<name>.pages.dev`. Check it there before touching the domain.
-4. Every push to the branch redeploys the site automatically.
+Any static host will work. Your domain's DNS stays at DreamHost, so **Netlify** is the simplest option: it accepts a plain `A` record for the bare domain. (Cloudflare Pages only supports the bare domain if you move DNS to Cloudflare.)
 
 **Netlify**
 
-- Choose **Add new site → Import from Git**, pick this repo, leave the build command empty and set the publish directory to `.`.
+1. Sign up at netlify.com, then choose **Add new site → Import an existing project** and pick this GitHub repo and the `main` branch.
+2. Leave the build command empty and set the publish directory to `.`. Deploy.
+3. Check the site at the `<name>.netlify.app` address before touching the domain.
+4. Every push to `main` redeploys the site automatically.
 
-**GitHub Pages**
+**GitHub Pages** (alternative)
 
 - In the repo, go to **Settings → Pages → Deploy from branch** and choose `main` and `/ (root)`.
 - On a free GitHub plan, the repo must be public for this to work.
 
-## Moving the domain off Squarespace
+**DreamHost hosting** (if you already pay for a hosting plan there)
 
-Don't cancel anything on Squarespace until the new site is live on your domain. Your email is Gmail, so there are no mail records to move. Before you change anything, check **Squarespace → Domains → seangarciafilm.com → DNS** for any extra records you added yourself, such as Google site verification TXT records, and copy those over too.
+- Upload everything in this folder, except `.git` and `README.md`, to the site's web directory over SFTP.
 
-**Option A: transfer the domain to Cloudflare (recommended)**
+## Moving the domain off Squarespace (domain registered at DreamHost)
 
-1. In Cloudflare, go to **Add a site**, enter `seangarciafilm.com` and choose the Free plan. Cloudflare imports your current DNS records.
-2. Remove the imported Squarespace records for `@` and `www`. Then, in your Pages project, go to **Custom domains** and add `seangarciafilm.com` and `www.seangarciafilm.com`. Cloudflare creates the correct records.
-3. In Squarespace, go to **Domains → seangarciafilm.com**:
-   - Change the nameservers to the two Cloudflare gives you.
-   - Wait until Cloudflare shows the site as **Active**. This usually takes minutes to hours.
-4. Still in Squarespace:
-   - Turn off the **Transfer lock**. Also turn off privacy/WHOIS protection if Squarespace asks you to.
-   - Copy the **auth (EPP) code**.
-5. In Cloudflare, go to **Domain Registration → Transfer Domains**, choose the domain, paste the code and pay for one year. Cloudflare charges the renewal price at cost, and your expiry date is extended by a year.
-6. Approve the confirmation email if one arrives. Transfers finish in up to 5 days, and the site stays up throughout.
+Squarespace only hosts the website. The domain is yours at DreamHost, so moving means changing where DreamHost points it. Your email is Gmail, so there are no mail records to worry about.
 
-A domain can't be transferred within 60 days of being registered or last transferred.
+1. **Connect the domain in Netlify:** in your Netlify site, go to **Domain management → Add a domain** and enter `seangarciafilm.com`. Choose to keep DNS at your current provider. Netlify shows you the records to create.
+2. **Change the records at DreamHost:** log in to panel.dreamhost.com and open the DNS settings for `seangarciafilm.com` (under Websites/Domains).
+   - Delete the records that point to Squarespace:
+     - `A` records for the bare domain pointing at `198.185.159.x` / `198.49.23.x`
+     - the `www` CNAME pointing at `ext-sq.squarespace.com`
+     - any Squarespace verification CNAME, e.g. `xxxx → verify.squarespace.com`
+   - Add the Netlify records:
 
-**Option B: point the domain elsewhere and leave it registered at Squarespace**
+     | Type  | Name            | Value                       |
+     |-------|-----------------|-----------------------------|
+     | A     | (blank / `@`)   | `75.2.60.5`                 |
+     | CNAME | `www`           | `<your-site>.netlify.app.`  |
 
-In **Squarespace → Domains → DNS**, delete the Squarespace defaults and add the records your host asks for. For Netlify, that's an `A` record for `@` pointing to `75.2.60.5` and a `CNAME` for `www`. You keep paying Squarespace for the domain only, not for the website plan.
-
-**Finish up**
-
-1. Once `https://seangarciafilm.com` loads from the new host and HTTPS works, cancel the Squarespace **website** subscription in **Settings → Billing**.
-2. If you did a transfer, make sure the domain shows as transferred first, so you don't cancel the domain by mistake.
+   - Keep any other records, e.g. Google verification TXT records.
+   - If the domain is set up in DreamHost as a *redirect* rather than *DNS only*, switch it to DNS only (no hosting) first, so the custom records take effect.
+   - If you're hosting on GitHub Pages instead, the bare domain needs four `A` records (`185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`) and `www` is a CNAME to `<username>.github.io.`.
+3. **Wait:** DNS changes usually show up within an hour, but can take up to 24–48 hours. Netlify issues the HTTPS certificate automatically once the records resolve. You can press **Verify DNS configuration** in Netlify to check.
+4. **Finish up on Squarespace:**
+   - Once `https://seangarciafilm.com` and `https://www.seangarciafilm.com` both load the new site, go to **Squarespace → Settings → Domains** and disconnect `seangarciafilm.com`.
+   - Then cancel the website subscription in **Settings → Billing**.
+   - Doing it in this order means the site never goes offline.
