@@ -272,3 +272,83 @@ img { max-width: 100%; display: block; }
 /* ---------- 404 ---------- */
 .not-found-section { min-height: 50vh; padding: 3.3vmax var(--page-padding); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
 .not-found-section .sqsrte-large { font-size: 1.4rem; margin: 0 0 1rem; }
+
+/* =====================================================================
+   Modern refresh: sticky frosted header, softer media, gentle motion.
+   All motion is switched off for visitors who prefer reduced motion.
+   ===================================================================== */
+:root { --ease: cubic-bezier(.22, .61, .36, 1); --radius: 6px; }
+
+html { scroll-behavior: smooth; }
+
+/* Sticky header with a translucent, blurred background */
+.header {
+  position: sticky; top: 0;
+  background: rgba(245, 245, 245, .82);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+  backdrop-filter: saturate(160%) blur(14px);
+  transition: box-shadow .3s var(--ease), padding .3s var(--ease);
+}
+.scrolled .header { box-shadow: 0 1px 0 rgba(0, 0, 0, .06); }
+@media (min-width: 768px) { .scrolled .header { padding-top: 1.2vw; padding-bottom: 1.2vw; } }
+.header-nav a, .mobile-menu a { transition: background-size .35s var(--ease), opacity .2s; }
+.header-nav a:hover { opacity: .65; }
+
+/* Portfolio grid: rounded tiles, slow zoom, title on a soft gradient */
+.portfolio-grid { gap: 14px; }
+.grid-item { border-radius: var(--radius); isolation: isolate; transform: translateZ(0); }
+.grid-image img { transition: transform .9s var(--ease); will-change: transform; }
+.portfolio-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, .72) 0%, rgba(0, 0, 0, .15) 55%, rgba(0, 0, 0, 0) 100%);
+  transition: opacity .45s var(--ease);
+}
+.portfolio-text {
+  justify-content: flex-end; text-align: left;
+  padding: 16px 18px;
+  color: #fff;
+  transform: translateY(8px);
+  transition: opacity .45s var(--ease), transform .45s var(--ease);
+}
+.grid-item:focus-visible { outline: 2px solid var(--black); outline-offset: 3px; }
+.grid-item:focus-visible .portfolio-overlay, .grid-item:focus-visible .portfolio-text { opacity: 1; transform: none; }
+@media (hover: hover) {
+  .grid-item:hover .portfolio-overlay { opacity: 1; }
+  .grid-item:hover .portfolio-text { opacity: 1; transform: none; }
+  .grid-item:hover .grid-image img { transform: scale(1.06); }
+}
+/* Touch screens have no hover, so titles are always shown there */
+@media (hover: none) {
+  .portfolio-overlay { opacity: .9; }
+  .portfolio-text { opacity: 1; transform: none; }
+}
+
+/* Project pages: rounded video frames with a soft shadow */
+.video-block { border-radius: var(--radius); overflow: hidden; box-shadow: 0 18px 50px -24px rgba(0, 0, 0, .45); }
+.image-block { border-radius: var(--radius); }
+
+/* Previous / Next with project titles */
+.item-pagination { gap: 24px; align-items: flex-start; border-top: 1px solid rgba(0, 0, 0, .08); margin-top: 1vw; }
+.item-pagination-link { display: flex; flex-direction: column; gap: 4px; max-width: 45%; transition: opacity .2s, transform .35s var(--ease); }
+.item-pagination-link--next { text-align: right; margin-left: auto; }
+.item-pagination-link:hover { opacity: 1; }
+.item-pagination-link--prev:hover { transform: translateX(-4px); }
+.item-pagination-link--next:hover { transform: translateX(4px); }
+.pag-label { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--dark-accent); }
+.pag-title { font-family: var(--heading-font); font-weight: 500; letter-spacing: -.01em; font-size: 17px; line-height: 1.3; }
+
+/* Footer links: animated underline */
+.footer a { text-decoration: none; background-image: linear-gradient(currentColor, currentColor); background-size: 100% 1px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size .35s var(--ease); }
+.footer a:hover { background-size: 0 1px; background-position: 100% 100%; }
+
+/* Page fade-in and scroll reveals (only when JavaScript runs) */
+@keyframes page-in { from { opacity: 0; } to { opacity: 1; } }
+main { animation: page-in .6s var(--ease) both; }
+.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .8s var(--ease), transform .8s var(--ease); transition-delay: var(--d, 0s); }
+.js .reveal.in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  main { animation: none; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  .grid-image img, .portfolio-text, .item-pagination-link { transition: none; transform: none !important; }
+}
