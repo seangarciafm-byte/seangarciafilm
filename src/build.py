@@ -65,7 +65,7 @@ def header(current):
     <nav class="nav" aria-label="Main">
       {link('/', 'Work', 'work')}
       {link('/about/', 'About', 'about')}
-      <a href="mailto:{SITE['email']}">Contact</a>
+      {link('/contact/', 'Contact', 'contact')}
     </nav>
   </div>
 </header>
@@ -79,7 +79,7 @@ def footer():
 <footer class="site-footer">
   <div class="wrap">
     <p class="footer-kicker reveal">Let’s work together</p>
-    <a class="footer-email reveal" href="mailto:{SITE['email']}">{e(SITE['email'])}<span class="arrow" aria-hidden="true">↗</span></a>
+    <a class="footer-email reveal" href="/contact/">Get in touch<span class="arrow" aria-hidden="true">↗</span></a>
     <div class="footer-bottom">
       <ul class="footer-social">{social}</ul>
       <p>© <span class="year">2026</span> {e(SITE['name'])} · Los Angeles</p>
@@ -131,9 +131,9 @@ if reel:
   <p class="reel-caption"><span>Editing Reel</span><a href="/selected-work/{reel['slug']}/">Open ↗</a></p>
 </section>
 '''
-home = head(f"{SITE['name']} — {SITE['role']}", '/') + header('work') + f'''<section class="wrap hero">
+home = head(f"{SITE['name']} | {SITE['role']}", '/') + header('work') + f'''<section class="wrap hero">
   <h1 class="hero-title reveal">{e(SITE['tagline'])}</h1>
-  <p class="hero-sub reveal">{e(SITE['guild'])} · <a href="mailto:{SITE['email']}">Get in touch</a></p>
+  <p class="hero-sub reveal">{e(SITE['guild'])} · <a href="/contact/">Get in touch</a></p>
 </section>
 {reel_html}<section class="wrap work" aria-labelledby="work-heading">
   <div class="work-head">
@@ -167,7 +167,7 @@ for idx, p in enumerate(projects):
             caption = f'<figcaption class="spot-caption"><span>{e(s["title"])}</span><span class="muted">{e(s["role"])}</span></figcaption>'
         body.append(f'<figure class="spot reveal"><div class="{cls}">{media}</div>{caption}</figure>')
     intro = f'<p class="project-intro">{e(p["intro"])}</p>' if p.get('intro') else ''
-    page = head(f"{p['name']} — {SITE['name']}", f"/selected-work/{p['slug']}/",
+    page = head(f"{p['name']} | {SITE['name']}", f"/selected-work/{p['slug']}/",
                 f"{p['name']} ({p['kind']}), edited by {SITE['name']}.") + header('work') + f'''<article class="wrap project">
   <a class="back" href="/#work-heading">← All work</a>
   <header class="project-head reveal">
@@ -190,15 +190,15 @@ for idx, p in enumerate(projects):
 # ---------- About ----------
 a = SITE['about']
 work_rows = ''.join(
-    f'<li class="row"><span>{e(w["role"].split(" @ ")[-1].strip())}<span class="muted"> — {e(w["role"].split(" @ ")[0].strip())}</span></span>'
+    f'<li class="row"><span>{e(w["role"].split(" @ ")[-1].strip())}<span class="muted"> · {e(w["role"].split(" @ ")[0].strip())}</span></span>'
     f'<span class="muted">{e(w["dates"])}</span></li>' for w in a['work'])
 award_rows = ''.join(f'<li class="row row--award"><span class="muted">{x["year"]}</span><span>{x["html"]}</span></li>' for x in a['accolades'])
-about = head(f"About — {SITE['name']}", '/about/') + header('about') + f'''<section class="wrap about">
+about = head(f"About | {SITE['name']}", '/about/') + header('about') + f'''<section class="wrap about">
   <div class="about-photo reveal"><img src="/assets/images/sean-garcia-headshot.jpg" alt="Portrait of {e(SITE['name'])}" width="1500" height="2249"></div>
   <div class="about-body">
     <h1 class="about-title reveal">{e(a['intro'][0])}</h1>
     <p class="about-sub reveal">{e(SITE['guild'])}</p>
-    <p class="reveal"><a class="button" href="mailto:{SITE['email']}">{e(SITE['email'])}</a></p>
+    <p class="reveal"><a class="button" href="/contact/">Get in touch</a></p>
     <h2 class="section-label reveal">Experience</h2>
     <ul class="rows reveal">{work_rows}</ul>
     <h2 class="section-label reveal">Recognition</h2>
@@ -208,8 +208,44 @@ about = head(f"About — {SITE['name']}", '/about/') + header('about') + f'''<se
 ''' + footer()
 write('/about/', about)
 
+# ---------- Contact ----------
+contact = head(f"Contact | {SITE['name']}", '/contact/', f"Get in touch with {SITE['name']}, an editor based in Los Angeles.") + header('contact') + '''<section class="wrap contact">
+  <div class="contact-intro">
+    <h1 class="about-title reveal">Let’s work together.</h1>
+    <p class="about-sub reveal">Tell me about your project, timeline and what you need. I’ll get back to you as soon as I can.</p>
+    <ul class="contact-links reveal">''' + ''.join(f'<li><a href="{u}" target="_blank" rel="noopener">{e(n)} ↗</a></li>' for n, u in SITE['social']) + '''</ul>
+  </div>
+  <form class="contact-form reveal" action="/contact/send.php" method="post" novalidate>
+    <div class="field">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" autocomplete="name" required maxlength="120">
+    </div>
+    <div class="field">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="email" required maxlength="200">
+    </div>
+    <div class="field">
+      <label for="company">Company <span class="muted">(optional)</span></label>
+      <input id="company" name="company" type="text" autocomplete="organization" maxlength="160">
+    </div>
+    <div class="field">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required maxlength="5000"></textarea>
+    </div>
+    <div class="field field--trap" aria-hidden="true">
+      <label for="website">Leave this empty</label>
+      <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+    </div>
+    <input type="hidden" name="t" value="">
+    <button class="button button--solid" type="submit">Send message</button>
+    <p class="form-status" role="status" aria-live="polite"></p>
+  </form>
+</section>
+''' + footer()
+write('/contact/', contact)
+
 # ---------- 404 ----------
-nf = head(f"Page not found — {SITE['name']}", '/') + header('') + '''<section class="wrap hero hero--center">
+nf = head(f"Page not found | {SITE['name']}", '/') + header('') + '''<section class="wrap hero hero--center">
   <h1 class="hero-title">This page doesn’t exist.</h1>
   <p class="hero-sub"><a href="/">Back to the work →</a></p>
 </section>
@@ -217,4 +253,4 @@ nf = head(f"Page not found — {SITE['name']}", '/') + header('') + '''<section 
 with open(os.path.join(ROOT, '404.html'), 'w', encoding='utf-8') as f:
     f.write(nf)
 
-print(f'Built {len(projects) + 3} pages.')
+print(f'Built {len(projects) + 4} pages.')

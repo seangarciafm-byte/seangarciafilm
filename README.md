@@ -8,6 +8,8 @@ The portfolio site for Sean Garcia. It's plain HTML and CSS with a small script,
 index.html                          Home: intro, reel, filterable work grid
 about/index.html                    About: experience and recognition
 selected-work/<project>/index.html  One page per project (same URLs as the old Squarespace site)
+contact/index.html                  Contact page with a form
+contact/send.php                    Emails form messages to seangarciafm@gmail.com (PHP, runs on DreamHost)
 404.html                            Not-found page
 assets/css/style.css                All styling (Manrope, light + automatic dark mode)
 assets/js/site.js                   Scroll fade-ins, header behaviour, work filters, footer year
@@ -78,3 +80,19 @@ Squarespace only hosts the website. The domain is yours at DreamHost, so moving 
    - Once `https://seangarciafilm.com` and `https://www.seangarciafilm.com` both load the new site, go to **Squarespace → Settings → Domains** and disconnect `seangarciafilm.com`.
    - Then cancel the website subscription in **Settings → Billing**.
    - Doing it in this order means the site never goes offline.
+
+## Contact form
+
+The form on `/contact/` posts to `contact/send.php`, which emails the message to `seangarciafm@gmail.com`, with Reply-To set to the sender so you can just hit Reply.
+
+- **Needs PHP:** it needs PHP, which DreamHost hosting includes. Opening the files locally or on a host without PHP won't send mail.
+- **Changing the address:** to change where messages go, edit `$TO` at the top of `contact/send.php`.
+- **Spam protection:**
+  - a hidden field that only bots fill in
+  - a minimum time on the page before sending
+  - checks that the name, email and message are filled in
+  - line breaks are stripped from header fields, so the form can't be used to send spam elsewhere
+- **Test it after uploading:**
+  1. Send yourself a message through the form.
+  2. If the first one lands in Gmail's spam folder, mark it "Not spam".
+  3. Optionally, make a Gmail filter for `from:contact@seangarciafilm.com` with "Never send it to Spam".
