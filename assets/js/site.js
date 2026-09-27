@@ -103,3 +103,23 @@
       });
   });
 })();
+
+// Videos: show a still until clicked, then load the real player and start it.
+(function () {
+  document.querySelectorAll('.player[data-embed]').forEach(function (player) {
+    player.addEventListener('click', function (event) {
+      if (event.metaKey || event.ctrlKey || event.shiftKey) return; // let them open it in a new tab
+      event.preventDefault();
+      var src = player.getAttribute('data-embed');
+      var iframe = document.createElement('iframe');
+      iframe.src = src + (src.indexOf('?') < 0 ? '?' : '&') + 'autoplay=1';
+      iframe.title = player.getAttribute('data-title');
+      iframe.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media';
+      iframe.setAttribute('allowfullscreen', '');
+      player.replaceChildren(iframe);
+      player.classList.add('is-playing');
+      player.removeAttribute('href');
+      player.removeAttribute('aria-label');
+    }, { once: true });
+  });
+})();

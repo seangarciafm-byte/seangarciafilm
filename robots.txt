@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /contact/send.php
+
+Sitemap: https://seangarciafilm.com/sitemap.xml

@@ -45,6 +45,11 @@ def head(title, path, description=None):
 <meta property="og:url" content="{DOMAIN}{path}">
 <meta property="og:type" content="website">
 <meta property="og:image" content="{DOMAIN}/assets/images/social-share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{asset('/assets/css/style.css')}">
@@ -92,20 +97,34 @@ def footer(cta=True):
 '''
 
 
+PAGES = []
+
+
 def write(path, content):
+    PAGES.append(path)
     dest = os.path.join(ROOT, path.strip('/'), 'index.html') if path != '/' else os.path.join(ROOT, 'index.html')
     os.makedirs(os.path.dirname(dest), exist_ok=True)
     with open(dest, 'w', encoding='utf-8') as f:
         f.write(content)
 
 
+def watch_url(src):
+    """Public page for a video, used when JavaScript is off."""
+    if 'vimeo' in src:
+        return 'https://vimeo.com/' + src.rstrip('/').rsplit('/', 1)[-1]
+    return 'https://www.youtube.com/watch?v=' + src.rstrip('/').rsplit('/', 1)[-1]
+
+
 def video(m, eager=False):
+    """A still with a play button; site.js swaps in the real player on click."""
     ratio = m['ratio']
     shape = 'vertical' if ratio < 0.9 else 'square' if ratio < 1.2 else 'wide'
+    title = m['title'] or 'Video'
     loading = '' if eager else ' loading="lazy"'
-    return (f'<div class="player player--{shape}" style="--ratio:{ratio}">'
-            f'<iframe src="{e(m["video"])}" title="{e(m["title"] or "Video")}"{loading} '
-            f'allow="autoplay; fullscreen; picture-in-picture; encrypted-media"></iframe></div>')
+    return (f'<a class="player player--{shape}" style="--ratio:{ratio}" href="{e(watch_url(m["video"]))}" '
+            f'data-embed="{e(m["video"])}" data-title="{e(title)}" aria-label="Play video: {e(title)}" target="_blank" rel="noopener">'
+            f'<img src="{m["poster"]}" alt=""{loading} decoding="async">'
+            f'<span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span></a>')
 
 
 def card(p, i):
@@ -254,5 +273,12 @@ nf = head(f"Page not found - {SITE['name']}", '/') + header('') + '''<section cl
 ''' + footer()
 with open(os.path.join(ROOT, '404.html'), 'w', encoding='utf-8') as f:
     f.write(nf)
+
+# ---------- Sitemap and robots.txt (help search engines find every page) ----------
+urls = ''.join(f'  <url><loc>{DOMAIN}{p}</loc></url>\n' for p in PAGES)
+with open(os.path.join(ROOT, 'sitemap.xml'), 'w', encoding='utf-8') as f:
+    f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls + '</urlset>\n')
+with open(os.path.join(ROOT, 'robots.txt'), 'w', encoding='utf-8') as f:
+    f.write(f'User-agent: *\nDisallow: /contact/send.php\n\nSitemap: {DOMAIN}/sitemap.xml\n')
 
 print(f'Built {len(projects) + 4} pages.')
