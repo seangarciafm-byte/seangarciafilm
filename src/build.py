@@ -124,7 +124,7 @@ def video(m, eager=False):
     return (f'<a class="player player--{shape}" style="--ratio:{ratio}" href="{e(watch_url(m["video"]))}" '
             f'data-embed="{e(m["video"])}" data-title="{e(title)}" aria-label="Play video: {e(title)}" target="_blank" rel="noopener">'
             f'<img src="{m["poster"]}" alt=""{loading} decoding="async">'
-            f'<span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span></a>')
+            f'<span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.6 5.4v13.2l10.8-6.6z"/></svg></span></a>')
 
 
 def card(p, i):

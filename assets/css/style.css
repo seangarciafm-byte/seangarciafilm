@@ -350,7 +350,7 @@ a.player { display: block; cursor: pointer; }
 .player img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1s var(--ease), opacity .4s; }
 .play {
   position: absolute; left: 50%; top: 50%;
-  width: clamp(56px, 7vw, 84px); aspect-ratio: 1;
+  width: clamp(48px, 5vw, 66px); aspect-ratio: 1;
   transform: translate(-50%, -50%);
   display: grid; place-items: center;
   border-radius: 50%;
@@ -358,8 +358,8 @@ a.player { display: block; cursor: pointer; }
   box-shadow: 0 8px 30px rgba(0, 0, 0, .25);
   transition: transform .4s var(--ease), background-color .3s;
 }
-.play svg { width: 38%; margin-left: 6%; fill: #121212; }
-.player--vertical .play { width: 56px; }
+.play svg { display: block; width: 50%; height: 50%; fill: #121212; }
+.player--vertical .play { width: 52px; }
 a.player:hover img { transform: scale(1.03); }
 a.player:hover .play { transform: translate(-50%, -50%) scale(1.08); background: #fff; }
 .player.is-playing { cursor: default; }
