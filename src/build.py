@@ -131,9 +131,9 @@ if reel:
   <p class="reel-caption"><span>Editing Reel</span><a href="/selected-work/{reel['slug']}/">Open ↗</a></p>
 </section>
 '''
-home = head(f"{SITE['name']} - {SITE['role']}", '/') + header('work') + f'''<section class="wrap hero">
+home = head(f"{SITE['name']} - {SITE['role']}", '/') + header('work') + f'''<section class="wrap hero hero--home">
   <h1 class="hero-title reveal">{e(SITE['tagline'])}</h1>
-  <p class="hero-sub reveal">{e(SITE['guild'])} · <a href="/contact/">Get in touch</a></p>
+  <p class="hero-sub reveal">{e(SITE['guild'])}<br><a href="/contact/">Get in touch →</a></p>
 </section>
 {reel_html}<section class="wrap work" aria-labelledby="work-heading">
   <div class="work-head">
@@ -179,8 +179,10 @@ for idx, p in enumerate(projects):
 </article>
 <nav class="wrap next reveal" aria-label="Next project">
   <a class="next-link" href="/selected-work/{nxt['slug']}/">
-    <span class="section-label">Next project</span>
-    <span class="next-title">{e(nxt['name'])} <span class="arrow" aria-hidden="true">→</span></span>
+    <span class="next-text">
+      <span class="section-label">Next project</span>
+      <span class="next-title">{e(nxt['name'])} <span class="arrow" aria-hidden="true">→</span></span>
+    </span>
     <span class="next-media"><img src="{nxt['thumb']}" alt="" loading="lazy"></span>
   </a>
 </nav>
