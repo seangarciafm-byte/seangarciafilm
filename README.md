@@ -94,6 +94,10 @@ The form on `/contact/` posts to `contact/send.php`, which emails the message to
 
 - **Needs PHP:** it needs PHP, which DreamHost hosting includes. Opening the files locally or on a host without PHP won't send mail.
 - **Changing the address:** messages are sent to and from `seangarciafm@gmail.com`. To change it, edit `$TO` and `$FROM` at the top of `contact/send.php`.
+- **Gmail app password:** the form sends through Gmail, logged in with an app password kept in `contact/gmail-password.php`. Without it, Gmail drops the messages.
+  1. Make one at https://myaccount.google.com/apppasswords (2-Step Verification must be on).
+  2. Paste it between the quotes in `contact/gmail-password.php` and upload that file to the `contact` folder.
+  3. `.htaccess` blocks anyone from opening that file in a browser. Don't commit the real password to GitHub.
 - **Spam protection:**
   - a hidden field that only bots fill in
   - a minimum time on the page before sending

@@ -26,3 +26,8 @@ RewriteRule ^ https://seangarciafilm.com%{REQUEST_URI} [L,R=301]
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
 </IfModule>
+
+# Never serve the Gmail password file
+<Files "gmail-password.php">
+  Require all denied
+</Files>
