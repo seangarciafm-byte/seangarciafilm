@@ -3,7 +3,7 @@
 // Emails each message to the address below, with Reply-To set to the sender.
 
 $TO = 'seangarciafm@gmail.com';
-$FROM = 'contact@seangarciafilm.com'; // must be on this domain so DreamHost will send it
+$FROM = 'seangarciafm@gmail.com';
 $SUBJECT_PREFIX = 'Website enquiry';
 
 $wantsJson = isset($_SERVER['HTTP_ACCEPT']) && strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false;

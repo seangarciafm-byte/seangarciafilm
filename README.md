@@ -93,7 +93,7 @@ Squarespace only hosts the website. The domain is yours at DreamHost, so moving 
 The form on `/contact/` posts to `contact/send.php`, which emails the message to `seangarciafm@gmail.com`, with Reply-To set to the sender so you can just hit Reply.
 
 - **Needs PHP:** it needs PHP, which DreamHost hosting includes. Opening the files locally or on a host without PHP won't send mail.
-- **Changing the address:** to change where messages go, edit `$TO` at the top of `contact/send.php`.
+- **Changing the address:** messages are sent to and from `seangarciafm@gmail.com`. To change it, edit `$TO` and `$FROM` at the top of `contact/send.php`.
 - **Spam protection:**
   - a hidden field that only bots fill in
   - a minimum time on the page before sending
@@ -102,4 +102,4 @@ The form on `/contact/` posts to `contact/send.php`, which emails the message to
 - **Test it after uploading:**
   1. Send yourself a message through the form.
   2. If the first one lands in Gmail's spam folder, mark it "Not spam".
-  3. Optionally, make a Gmail filter for `from:contact@seangarciafilm.com` with "Never send it to Spam".
+  3. Make a Gmail filter for `subject:"Website enquiry"` with "Never send it to Spam".
