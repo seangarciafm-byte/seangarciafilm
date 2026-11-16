@@ -151,8 +151,8 @@ if reel:
 </section>
 '''
 home = head(f"{SITE['name']} - {SITE['role']}", '/',
-            "Sean Garcia is a Los Angeles trailer and TV editor, member of Motion Picture Editors Guild Local 700. "
-            "Work includes Euphoria, Killers of the Flower Moon, The Lion King and Black Panther.") + header('work') + f'''<section class="wrap hero hero--home">
+            "Sean Garcia is a Los Angeles trailer and TV editor. Work includes Euphoria, "
+            "Killers of the Flower Moon, The Lion King and Black Panther.") + header('work') + f'''<section class="wrap hero hero--home">
   <h1 class="hero-title reveal">{e(SITE['tagline'])}</h1>
   <p class="hero-sub reveal">{e(SITE['guild'])}<br><a href="/contact/">Get in touch →</a></p>
 </section>
