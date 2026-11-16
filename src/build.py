@@ -150,14 +150,16 @@ if reel:
   <p class="reel-caption"><span>Editing Reel</span><a href="/selected-work/{reel['slug']}/">Open ↗</a></p>
 </section>
 '''
-home = head(f"{SITE['name']} - {SITE['role']}", '/') + header('work') + f'''<section class="wrap hero hero--home">
+home = head(f"{SITE['name']} - {SITE['role']}", '/',
+            "Sean Garcia is a Los Angeles trailer and TV editor, member of Motion Picture Editors Guild Local 700. "
+            "Work includes Euphoria, Killers of the Flower Moon, The Lion King and Black Panther.") + header('work') + f'''<section class="wrap hero hero--home">
   <h1 class="hero-title reveal">{e(SITE['tagline'])}</h1>
   <p class="hero-sub reveal">{e(SITE['guild'])}<br><a href="/contact/">Get in touch →</a></p>
 </section>
 {reel_html}<section class="wrap work" aria-labelledby="work-heading">
   <div class="work-head">
     <h2 id="work-heading" class="section-label">Selected Work</h2>
-    <div class="chips" role="group" aria-label="Filter projects">{chips}</div>
+    <div class="chips" role="group" aria-label="Filter projects" data-nosnippet>{chips}</div>
   </div>
   <div class="grid" id="grid">
     {''.join(card(p, i) for i, p in enumerate(work))}
