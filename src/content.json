@@ -116,6 +116,27 @@
       ]
     },
     {
+      "slug": "children-of-blood-and-bone-trailer",
+      "name": "Children of Blood and Bone",
+      "kind": "Trailer",
+      "category": "trailer",
+      "thumb": "/assets/images/thumb-children-of-blood-and-bone-trailer.jpg",
+      "spots": [
+        {
+          "title": "Trailer · “New Trailer”",
+          "role": "Editor",
+          "media": [
+            {
+              "video": "https://www.youtube-nocookie.com/embed/a20LtkPALYM",
+              "ratio": 1.77,
+              "title": "Children of Blood and Bone | New Trailer (2027)",
+              "poster": "/assets/images/posters/youtube-a20LtkPALYM.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "slug": "euphoria-season-3-socials",
       "name": "Euphoria Season 3",
       "kind": "Socials",
